@@ -1,0 +1,28 @@
+self_configurator/dist
+self_configurator/target
+dioxus\packages\fullstack\examples\self_configurator\self_configurator\dist
+dioxus\packages\fullstack\examples\self_configurator\self_configurator\target
+*.sif
+
+# Ignore OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Rust
+target/
+**/*.rs.bk
+Cargo.lock  # only if you're writing a library
+
+# Logs
+logs/
+*.log
+
+# Backup files
+*~
+*.swp
+*.bak
+*.kate-swp

@@ -1,0 +1,328 @@
+
+
+:root {
+  --xxl: 1536px;
+  --xl: 1280px;
+  --lg: 1024px;
+  --md: 768px;
+  --sm: 640px;
+  --xs: 475px;
+}
+
+/* xxl */
+@media (max-width: var(--xxl)) {}
+
+/* xl */
+@media (max-width: var(--xl)) {}
+
+/* lg */
+@media (max-width: var(--lg)) {}
+
+/* md */
+@media (max-width: var(--md)) {}
+
+/* sm */
+@media (max-width: var(--sm)) {}
+
+/* xs */
+@media (max-width: var(--xs)) {}
+
+
+
+
+//################################################################################
+//## Frequent classes
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+.nucleotide-section.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 0.75em;
+}
+
+.button-card.button-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    border: 2px solid black;
+}
+
+.button-card.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 6px;
+}
+
+.button-card.title {
+    text-align: center;
+}
+
+.button-card.subtitle {
+    text-align: center;
+}
+
+.spacer {
+    width: 80%;
+    align-self: center;
+    border: 2px solid black;
+
+    margin-top: 8px;
+}
+
+.download-button {
+    background: grey;
+    border: 2px solid black;
+    border-radius: 8px;
+
+    max-width: 8em;
+    min-height: 3em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-input.container,
+.number-input.container,
+.file-input.container,
+.directory-input.container {
+    width: 14em;
+}
+
+.text-input.title,
+.number-input.title,
+.file-input.title,
+.directory-input.title {
+    word-break: break-word;
+}
+
+.input-field {
+    margin-left: 12px;
+}
+
+.input-field-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.request-file-button {
+    height: 28px;
+    width: 28px;
+}
+
+.request-directory-button {
+    height: 28px;
+    width: 28px;
+}
+
+//################################################################################
+//## background
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+.responsive-container {
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-page.background {
+    width: 100%;
+    max-width: 64rem;
+
+    background: pink;
+    padding: 24px 36px 36px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+//################################################################################
+//## Header section
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+.header.title {
+    text-align: center;
+    user-select: none;
+}
+
+.header.subtitle {
+    text-align: center;
+    user-select: none;
+    max-width: 60ch;
+}
+
+//################################################################################
+//## Nucleotide section
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+.nucleotide-section.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75em;
+
+    margin-top: 1em;
+}
+
+.nucleotide-section.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+
+    max-width: 30em;
+}
+
+.nucleotide-section.button-card {
+    border-radius: 8px;
+}
+
+.nucleotide-section.button-card.selected {
+    //background: cyan;
+}
+
+//################################################################################
+//## Reference Tab section
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+.choice-tab.container {
+    max-width: 60em;
+}
+
+.choice-tab.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.choice-tab.choice-container {
+    padding: 5px 10px 0px 10px;
+}
+
+.choice-tab.choice-container.selected { }
+
+.choice-tab.genome-reference.choice-container {
+    border-radius: 8px 4px 0px 0px;
+}
+
+.choice-tab.transcriptome-reference.choice-container {
+    border-radius: 4px 8px 0px 0px;
+}
+
+.choice-tab.choice-area.selected {
+    //background: cyan;
+}
+
+.choice-tab.tab-content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 8px 16px 8px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+//################################################################################
+//## Differential Expression section
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+.dea-card.container {
+    max-width: 36.5em;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.dea-card.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6em;
+}
+
+.dea-card.toggle-button-container {
+    height: 20px;
+    width: 20px;
+}
+
+//################################################################################
+//## Utility classes
+//################################################################################
+
+.unused {
+    // dioxus bug: first selection after a section divider is not being applied
+    background: white;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,275 @@
+
+
+:root {
+  --xxl: 1536px;
+  --xl: 1280px;
+  --lg: 1024px;
+  --md: 768px;
+  --sm: 640px;
+  --xs: 475px;
+
+  --bg-main-page: #205a5ec8;
+  --bg-main-page: #72aaae68;
+  --bg-widget1: #205a5e;
+  --bg-widget2: #1a7677;
+  --bg-button: #3fb8b1;
+  --bg-widget-selected: #00939548;
+  --bg-widget-selected: rgba(0, 147, 149, 0.68);
+
+  --text-lg: #e7fcff;
+  --text-lg: #138480;
+  --text-lg: #205a5e;
+  --text-lg-dark: #1c4c4d;
+  --text-lg-vdark: #163d3e;
+  --text-lg-black: black;
+  --text-sm: #67d6d0;
+  --text-btn: #62d3cf;
+}
+
+
+
+
+
+
+h1, h2 {
+  color: black;
+}
+
+
+
+
+h3, h4, h5, h6, p {
+  color: #67d6d0;
+}
+
+.choice-tab.choice-area.selected {
+  //background: #00939548;
+}
+
+
+
+
+
+//################################################################################
+//## buttons rs
+//################################################################################
+
+.unused {}
+
+.download-button {
+  background: #3fb8b1;
+}
+
+a:link.download-button, a:visited.download-button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link:active.download-button, a:visited:active.download-button {
+  color: black;
+}
+
+.request-file-button {
+  background: #3fb8b1;
+}
+
+.request-directory-button {
+  background: #3fb8b1;
+}
+
+
+//################################################################################
+//## input_fields rs
+//################################################################################
+
+.unused {}
+
+.text-input.container { }
+
+.text-input.title { }
+
+.text-input.input-field { }
+
+.number-input.container { }
+
+.number-input.title { }
+
+.number-input.input-field { }
+
+.file-input.container { }
+
+.file-input.title { }
+
+.file-input.input-field { }
+
+.directory-input.container { }
+
+.directory-input.title { }
+
+.directory-input.input-field { }
+
+
+//################################################################################
+//## main_page rs
+//################################################################################
+
+.unused {}
+
+.main-page.responsive-container { }
+
+.main-page.background {
+  background: #205a5ec8;
+}
+
+.main-page.header.title {
+  //color: #163d3e;
+}
+
+.main-page.header.subtitle {
+  color: black;
+}
+
+.main-page.nucleotide-section.title {
+  //color: #163d3e;
+}
+
+.button-card.button-background {
+  background: #1a7677;
+}
+
+.button-card.button-container {
+  background: #1a7677;
+}
+
+.button-card.button-container.selected {
+  background: #00939548;
+}
+
+.main-page.nucleotide-section.button-container { }
+
+.nucleotide-section.cdna-button { }
+
+.nucleotide-section.rna-button { }
+
+.main-page.reference-section.container { }
+
+.main-page.reference-section.choice-tabs { }
+
+.main-page.reference-section { }
+
+.main-page.reference-section.choice-content { }
+
+.main-page.dea-section { }
+
+.main-page { }
+
+.main-page { }
+
+.button-card.container { }
+
+.button-card.title { }
+
+.button-card.subtitle { }
+
+.TabPanel.title { }
+
+.TabPanel.title { }
+
+.TabPanel.title { }
+
+.choice-tab.container { }
+
+.choice-tab.header-container { }
+
+.choice-tab.choice-container {
+  background: #1a7677;
+  border: 2px solid black;
+}
+
+.choice-tab.choice-container.selected {
+  background: #1a7677;
+  border-bottom: 2px solid #1a7677;
+}
+
+.choice-tab.tab-content {
+  background: #1a7677;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.choice-tab.genome-reference.choice-container { }
+
+.choice-tab.genome-reference.choice-area { }
+
+.choice-tab.genome-reference.element { }
+
+.choice-tab.transcriptome-reference.choice-container { }
+
+.choice-tab.transcriptome-reference.choice-area { }
+
+.choice-tab.transcriptome-reference.element { }
+
+.choice-tab.genome-reference.tab-content { }
+
+.choice-tab.genome-reference.tab-content-title { }
+
+.choice-tab.spacer { }
+
+.choice-tab.genome-reference.tab-content-title { }
+
+.choice-tab.transcriptome-reference.tab-content { }
+
+.choice-tab.transcriptome-reference.tab-content-title { }
+
+.dea-card.container {
+  background: #1a7677;
+}
+
+.dea-card.header { }
+
+.dea-card.header-title { }
+
+.dea-card.toggle-button-container {
+  background: #3fb8b1;
+  border: 2px solid black;
+  border-radius: 4px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dea-card.toggle-button.bi.bi-x-lg { }
+
+.dea-card.toggle-button.bi.bi-x-lg { }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

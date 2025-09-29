@@ -1,0 +1,44 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behaviour: smooth;
+}
+
+body {
+  //font-family: 'Inter', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  user-select: none;
+}
+
+
+

@@ -1,0 +1,12 @@
+[alias]
+#xtask = "run --package xtask --bin xtask --"
+containerize = "run --package build_tasks --bin build_tasks --"
+cleanlx = "run --package build_tasks --bin clean_linux_build_artifacts --"
+
+
+
+[env]
+CARGO_WORKSPACE_DIR = { value = "", relative = true }
+LINUX_TARGET_DIR = "~/rust_build_target/wf_transcriptome"
+
+

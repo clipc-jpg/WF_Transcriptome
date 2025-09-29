@@ -1,0 +1,50 @@
+[application]
+
+# App (Project) Name
+name = "WFTR"
+
+# Dioxus App Default Platform
+# desktop, web, mobile, ssr
+default_platform = "web"
+
+# `build` & `serve` dist path
+out_dir = "target/release/public"
+
+# resource (public) file folder
+asset_dir = "public"
+
+[web.app]
+
+# HTML title tag content
+title = "WFTR"
+
+[web.watcher]
+
+# when watcher trigger, regenerate the `index.html`
+reload_html = true
+
+# which files or dirs will be watcher monitoring
+watch_path = ["src", "public"]
+
+# include `assets` in web platform
+[web.resource]
+
+# CSS style file
+style = ["/styles/norm.scss",
+         "/styles/resets.scss",
+         "/styles/utilities.scss"]
+
+# Javascript code file
+script = []
+
+[web.resource.dev]
+
+# serve: [dev-server] only
+
+# CSS style file
+style = ["/styles/norm.scss",
+         "/styles/resets.scss",
+         "/styles/utilities.scss"]
+
+# Javascript code file
+script = []

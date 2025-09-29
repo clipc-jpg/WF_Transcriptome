@@ -1,0 +1,128 @@
+
+
+Bootstrap: localimage
+From: ./wf_deps.sif
+	
+%files
+	../scripts /WFTDEPS/wft_scripts
+	../target/dx/self_configurator/release/web /WFTDEPS/self_configurator_web
+    
+%environment
+	# export X=
+
+%post
+	export DEBIAN_FRONTEND=noninteractive
+	chmod +x /WFTDEPS/self_configurator_web/server
+	
+	apt-get purge -y build-essential wget && \
+	apt-get autoremove -y && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/*
+	
+	conda clean -afy
+	pip cache purge
+	
+	#rm -rf /WFTDeps/JAFFA-version-2.3
+
+%runscript
+	julia -q /WFTDEPS/wft_scripts/run_wftrpipeline.jl ${*}
+    
+%startscript
+	
+%test
+	echo "test minimap2 version: $(minimap2 --version)"
+	echo "test gffcompare version: $(gffcompare --version)"
+	echo "test stringtie version: $(stringtie --version)"
+    echo "test seqkit version: $(seqkit version)"
+    echo "test gffread version: $(gffread --version)"
+    echo "test bedtools version: $(bedtools --version)"
+    echo "test samtools version: $(samtools --version)"
+    echo "test JAFFAL location: $(ls /WFTDeps/JAFFA-version-2.3 | grep JAFFA)"
+    echo "test python version: $(python --version)"
+    echo "test julia version: $(julia --version)"
+    # test python packages
+    echo "test pysam version: $(python -c "import pysam; print(f'pysam,{pysam.__version__}')")"
+    echo "test aplanat version: $(python -c "import aplanat; print(f'aplanat,{aplanat.__version__}')")"
+    echo "test pandas version: $(python -c "import pandas; print(f'pandas,{pandas.__version__}')")"
+    echo "test sklearn version: $(python -c "import sklearn; print(f'scikit-learn,{sklearn.__version__}')")"
+    echo "test pychopper version: $(python -c "import pychopper; print(f'pychopper,{pychopper.__version__}')")"
+	
+%labels
+	Author ny298
+	Version v0.1.0
+
+%help
+	This container is intended as a production container that is able to run the wf_transcriptomes workflow defined at https://github.com/epi2me-labs/wf-transcriptomes.
+    Each Tool in the pipeline can be invoked individually with the "singularity --app" feature.
+
+
+
+################################################################################
+## Application self-configurator
+################################################################################
+
+%appfiles self-configurator
+	
+%appenv self-configurator
+	
+%appinstall self-configurator
+	
+%apprun self-configurator
+	/WFTDEPS/self_configurator_web/server ${*}
+	
+#%appstart self-configurator
+	
+%apptest self-configurator
+	
+%applabels self-configurator
+	
+%apphelp self-configurator
+	
+
+
+################################################################################
+## Application DownloadHG38
+################################################################################
+
+%appenv DownloadHG38
+	
+%appinstall DownloadHG38
+	
+%apprun DownloadHG38
+    #wget "https://figshare.com/ndownloader/files/25410494"
+    #mv ./25410494 ./reffiles.tar.gz
+	#echo "Renamed download to reffiles.tar.gz. Unpacking..."
+    #tar -xzf "reffiles.tar.gz"
+	#echo "Removing reffiles.tar.gz..."
+    #rm "reffiles.tar.gz"
+	#echo "Done"
+	echo "Downloading Example Dataset provided by EPI2MELabs..."
+	echo "URL : https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-transcriptomes/wf-transcriptomes-demo.tar.gz"
+	wget https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-transcriptomes/wf-transcriptomes-demo.tar.gz
+	echo "Unpacking Example Dataset..."
+	tar -xzvf wf-transcriptomes-demo.tar.gz
+	echo "Done"
+	
+%applabels DownloadHG38
+	Author ny298
+	Version v0.3.0
+	
+%apphelp DownloadHG38
+	Downloads a gzipped reference genome into the singularity directory /mnt/workdir/reference_data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
